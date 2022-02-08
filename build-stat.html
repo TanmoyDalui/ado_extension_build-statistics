@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+        <head>          
+            <!--<script src="sdk/node_modules/vss-web-extension-sdk/lib/VSS.SDK.js"></script>-->
+            <script src="sdk/node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>
+            <script src="scripts/utils.js"></script>
+            <script src="scripts/az-rest.js"></script>
+            <script src="scripts/widget.js"></script>
+        </head>
+        <body>
+            <div class="widget" id="widgetBody" style="background-color: #ffffff">
+                <h2 class="title">
+                    <span class="inner-title" id="innerTitle"></span>
+                    <span class="subtitle" id="statType"> for Current Project</span>
+                    <div class="subtitle" id="statDuration">During last 1 day</div>
+                </h2>
+                <!--<div class="big-count" id="buildCount" style="text-align: center;"></div>-->
+                <div id="Chart-Container"></div>
+            </div>
+        </body>
+    </html>

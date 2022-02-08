@@ -1,0 +1,30 @@
+input[type=password], input[type=checkbox], select, textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 5px 3px 5px;
+    margin: 4px -4px 5px 1px;
+    border: 1px solid rgb(234, 234, 234);
+
+}
+   
+input[type=text]:focus, input[type=password]:focus, input[type=checkbox]:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 8px rgb(59, 175, 207);
+    padding: 3px 5px 3px 5px;
+    margin: 4px -4px 5px 1px;
+    border: 1px solid rgb(38, 153, 185);
+}
+
+input[type=password], select {
+    height: 32px;
+}
+
+hr {
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+}

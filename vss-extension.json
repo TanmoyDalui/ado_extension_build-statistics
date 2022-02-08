@@ -1,0 +1,118 @@
+{
+    "manifestVersion": 1,
+    "id": "dalui-tanmoy-BuildStatWidget",
+    "version": "1.4.8",
+    "name": "Build Statistics",
+    "description": "Dashboard widget to get the build statistics accross all Collection/Organization and all projects",
+    "publisher": "tanmoydalui",
+    "galleryFlags": [
+            "Public"
+    ],
+    "tags": [
+        "build",
+        "statistics",
+        "total",
+        "projects"
+    ],
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "branding": {
+        "color": "rgb(6, 109, 122)",
+        "theme": "dark"
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "license-terms.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "BuildStatWidget",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog",
+                "tanmoydalui.dalui-tanmoy-BuildStatWidget.BuildStatWidget.Configuration"
+            ],
+            "properties": {
+                "name": "Build Statistics",
+                "description": "Dashboard widget to get the build statistics accross all Collection/Organization and all projects",
+                "catalogIconUrl": "img/logo.png",
+                "previewImageUrl": "img/logo.png",                            
+                "uri": "build-stat.html",
+                "isNameConfigurable": true,
+                "supportedSizes": [
+                    {
+                        "rowSpan": 2,
+                        "columnSpan": 2
+                    }
+                ],
+                "supportedScopes": ["project_team"]
+            }
+        },
+        {
+            "id": "BuildStatWidget.Configuration",
+            "type": "ms.vss-dashboards-web.widget-configuration",
+            "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+            "properties": {
+                "name": "BuildStatWidget Configuration",
+                "description": "Configures BuildStatWidget",
+                "uri": "widget-configuration.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "build-stat.html", "addressable": true
+        },
+        {
+            "path": "overview.md", "addressable": true
+        },
+        {
+            "path": "license-terms.md", "addressable": true
+        },
+        {
+            "path": "widget-configuration.html", "addressable": true
+        },
+        {
+            "path": "sdk/node_modules/vss-web-extension-sdk/lib", "addressable": true
+        },
+        {
+            "path": "scripts", "addressable": true
+        },
+        {
+            "path": "img", "addressable": true
+        },
+        {
+            "path": "screenshots", "addressable": true
+        },
+        {
+            "path": "css", "addressable": true
+        }
+    ],
+    "scopes":[
+        "vso.build"
+    ],
+    "screenshots": [
+        {
+            "path": "screenshots/screenshot-1.JPG"
+        },
+        {
+            "path": "screenshots/screenshot-2.JPG"
+        },
+        {
+            "path": "screenshots/screenshot-3.JPG"
+        }
+    ]
+}

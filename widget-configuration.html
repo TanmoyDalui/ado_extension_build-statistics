@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>    
+        <link rel="stylesheet" href="css/configuration.css">                      
+        <script src="sdk/node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>      
+        <script src="scripts/widget-configuration.js"></script>       
+    </head>
+    <body>
+        <div class="widget-configuration" id="main-div">
+            <div>
+                <label for="backgroundColor" style="display: inline-block; text-align: right;">Widget color: </label>
+                <input type="color" name="backgroundColor" id="backgroundColor" value="#ffffff" />
+            </div>
+            <hr/>
+            <fieldset class="checkbox" id="all-collection-field">
+                <input type="checkbox" id="all-collection" value="id" name="check">
+                <label for="all-collection">Access all projects accross all Collections</label>
+            </fieldset>
+            <br/>
+            <div class="single-line-text-input" id="credentials">
+                <legend>Read Access credential for ALL Collections</legend>
+                <br/>
+                <label for="user-id">User Id</label>
+                <input type="text" id="user-id" size="30" autocomplete="off"></input>
+                <br/>
+                <label for="password">PAT/Password</label>
+                <input type="password" id="password" size="55"></input>
+            </div>
+            <hr/>
+            <div class="dropdown">
+                <label>Duration (days)</label>
+                <div class="wrapper">
+                    <select id="duration-dropdown">						
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="10">10</option>
+                        <option value="14">14</option>
+                        <option value="30">30</option>	
+                        <option value="60">60</option>	
+                        <option value="90">90</option>		
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </body>
+</html>
