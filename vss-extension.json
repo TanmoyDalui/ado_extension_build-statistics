@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "dalui-tanmoy-BuildStatWidget",
-    "version": "1.4.8",
+    "version": "1.4.9",
     "name": "Build Statistics",
     "description": "Dashboard widget to get the build statistics accross all Collection/Organization and all projects",
     "publisher": "tanmoydalui",
