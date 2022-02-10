@@ -12,6 +12,8 @@ var cancelCount = 0;
 var totalProjectCount = 0;
 var currentProjectCount = 0;
 
+var timeoutCounter = 1;
+
 function resetCounters(){
     noneCount = 0;
     successCount = 0;
@@ -77,7 +79,8 @@ function getBuilds(ChartServices, collectionName, projectName, minTime){
     var request = new XMLHttpRequest();
     request.open("GET", getRootUri() + "/" + collectionName + "/" + projectName + "/_apis/build/builds?api-version=6.0&minTime=" + minTime, true);
     request.setRequestHeader('Authorization', 'Basic ' + authorizationBasic);
-    request.send();
+    
+    setTimeout(() => {request.send(); }, (timeoutCounter++ % 30)*5);
 
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
@@ -92,6 +95,7 @@ function getBuilds(ChartServices, collectionName, projectName, minTime){
             cancelCount = cancelCount + builds.reduce((acc, cur) => cur.result === BuildResult.Canceled ? ++acc : acc, 0);
 
             currentProjectCount++;
+            responseObj = null;
 
             //console.log(collectionName + " : " + projectName + "-" + successCount + "-" + failureCount);
 
